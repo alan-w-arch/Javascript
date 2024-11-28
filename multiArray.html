@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = new Array(3);
+        for(let i=0;i<arr.length;i++){
+            arr[i] = new Array(3);
+        }
+        for(let i=0;i<arr.length;i++){
+            for(let j=0;j<arr[i].length;j++){
+                arr[i][j] = parseInt(prompt("enter a no." , 0));
+            }
+        }
+        for(let i=0;i<arr.length;i++){
+            for(let j=0;j<arr[i].length;j++){
+                document.write(arr[i][j] + " ");
+            }
+            document.write("<br>")
+        }
+    </script>
+    
+</body>
+</html>

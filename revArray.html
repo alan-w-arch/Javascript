@@ -1,0 +1,26 @@
+<!--WAP to read n no. of values in an array and display them in reverse order -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Enter the number of values: "));
+        var arr = new Array(n);
+        for (var i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter value " + (i + 1)));
+        }
+        document.write("Original array: ");
+        for (var i = 0; i < n; i++) {
+            document.write(arr[i] + " ");
+        }
+        document.write("<br>Reversed array: ");
+        for (var i = n - 1; i >= 0; i--) {
+            document.write(arr[i] + " ");
+        }
+    </script>
+</body>
+</html>

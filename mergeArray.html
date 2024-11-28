@@ -1,0 +1,27 @@
+<!--Merge to array and sort them in ascending or descending order-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = new Array('1','2','3');
+        var arr2 = new Array('8','7','5');
+        var arr3 = new Array(arr1.length + arr2.length);
+        for(var i =0;i<arr3.length;i++){
+            if(i<arr1.length){
+                arr3[i] = arr1[i];
+            }
+            if(i>=arr1.length){
+                arr3[i] = arr2[i-arr1.length];
+            }
+        }
+        console.log("Original arr3 : " + arr3);
+        document.write("Sorted arr3 in ascending order : " + arr3.sort());
+        document.write("<br>","Sorted arr3 in descending order : " + arr3.sort().reverse());
+    </script>
+</body>
+</html>
