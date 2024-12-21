@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toString(num) {
+          return num.toString();
+        }
+    </script>
+    <title>Calculater</title>
+</head>
+<body>
+    <div class="container h-screen w-full flex justify-center items-center bg-[#e3f9ff]">
+        <div class="calculater bg-[#3a4452] rounded-lg p-5">
+            <form>
+                <div class="display flex justify-end my-5">
+                    <input class="flex-auto w-64 text-5xl text-right bg-[#3a4452] text-white" type="text" name="display">
+                </div>
+                <div>
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-white hover:animate-pulse text-xl text-amber-400 cursor-pointer m-2.5" type="button" value="AC" onclick="display.value ='' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-white hover:animate-pulse text-xl text-amber-400 cursor-pointer m-2.5" type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1) ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-white hover:animate-pulse text-xl text-amber-400 cursor-pointer m-2.5" type="button" value="." onclick="display.value +='.' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-white hover:animate-pulse text-xl text-amber-400 cursor-pointer m-2.5" type="button" value="/" onclick="display.value +='/' ">
+                </div>
+                <div>
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="7" onclick="display.value +='7' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="8" onclick="display.value +='8' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="9" onclick="display.value +='9' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-white hover:animate-pulse text-xl text-amber-400 cursor-pointer m-2.5" type="button" value="*" onclick="display.value +='*' ">
+                </div>
+                <div>
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="4" onclick="display.value +='4' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="5" onclick="display.value +='5' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="6" onclick="display.value +='6' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-white hover:animate-pulse text-xl text-amber-400 cursor-pointer m-2.5" type="button" value="-" onclick="display.value +='-' ">
+                </div>
+                <div>
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="1" onclick="display.value +='1' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="2" onclick="display.value +='2' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="3" onclick="display.value +='3' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-white hover:animate-pulse text-xl text-amber-400 cursor-pointer m-2.5" type="button" value="+" onclick="display.value +='+' ">
+                </div>
+                <div>
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="00" onclick="display.value +='00' ">
+                    <input class="w-16 h-16 border-0 outline-0 rounded-lg shadow shadow-amber-200 hover:animate-pulse text-xl text-white cursor-pointer m-2.5" type="button" value="0" onclick="display.value +='0' ">
+                    <input class="w-[9.25rem] h-16 border-0 outline-0 rounded-lg shadow shadow-white hover:animate-pulse text-xl text-amber-400 cursor-pointer m-2.5" type="button" value="=" onclick="display.value = eval(display.value) ">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
